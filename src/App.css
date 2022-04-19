@@ -44,6 +44,12 @@ body {
   color: white;
   background-color: #202731;
 }
+#projects{
+  background-color: #d35d5d;
+}
+#navba{
+  background-color: #d8a464;
+}
 .custom-shape-divider-bottom-1650314778 {
   position: relative;
   bottom: 0;
@@ -63,4 +69,24 @@ body {
 
 .custom-shape-divider-bottom-1650314778 .shape-fill {
   fill: #d35d5d;
+}
+.proj-bcg {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.proj-bcg svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.proj-bcg .shape-fill {
+  fill: #202731;
 }
