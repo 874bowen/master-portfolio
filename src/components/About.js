@@ -7,9 +7,9 @@ export default function About() {
         <section id="about" mb-10>
           <div className="container">
             <div className="row">
-              <div className="col-12 col-md-6">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                Hi, I'm Ivan.
+              <div className="align-self-center col-12 col-md-6">
+              <h1 className="text-white">
+                Hi, I'm <span className="text-success">Ivan</span>.
                 <br className="" />I love to build amazing
                 web apps.
               </h1>
