@@ -48,8 +48,15 @@ body {
   background-color: #d35d5d;
 }
 #navba{
-  background-color: #d8a464;
+  background-color: #333942;
+  color: white;
 }
+.brick{
+  color: #d35d5d;
+}
+/* #navba{
+  background-color: #d8a464;
+} */
 .custom-shape-divider-bottom-1650314778 {
   position: relative;
   bottom: 0;

@@ -7,13 +7,13 @@ import { Container, Navbar, NavDropdown, FormControl, Nav,
 export default function Navba() {
     return(
  
-    <Navbar sticky="top" id="navba" expand="lg">
-        <Container>
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+    <Navbar  className="text-white" sticky="top" id="navba" expand="lg">
+        <Container className="text-white">
+            <Navbar.Brand href="#">Ivan Bowen</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
             <Nav
-                className="me-auto my-2 my-lg-0"
+                className="text-white me-auto my-2 my-lg-0"
                 style={{ maxHeight: '100px' }}
                 navbarScroll
             >

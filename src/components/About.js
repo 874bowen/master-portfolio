@@ -1,6 +1,6 @@
 // src/components/About.js
 import React from "react";
-import { Button } from "reactstrap"
+import { Button } from "react-bootstrap"
 export default function About() {
     return (
         
@@ -9,26 +9,23 @@ export default function About() {
             <div className="row">
               <div className="align-self-center col-12 col-md-6">
               <h1 className="text-white">
-                Hi, I'm <span className="text-success">Ivan</span>.
-                <br className="" />I love to build amazing
-                web apps.
+                Hi, I'm <span className="text-success">Ivan Bowen</span>.
               </h1>
-              
+              <h2>I love <span class="brick">building</span> amazing
+                web apps.</h2>
               <p className="">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-                laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-                Laborum, voluptas natus?
+              Enthusiastic Web developer eager to contribute to team success through hard work, attention to detail and excellent organizational skills. Clear understanding of web development and designing and training in Responsive Web Design. Motivated to learn, grow and excel in Technology.
               </p>
               <div className="flex justify-center">
                 <a
                   href="#contact"
                   className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
-                  <Button color="success">Work with me</Button>
+                  <Button variant="outline-success">Work with me</Button>
                 </a>
                 <a
                   href="#projects"
                   className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-                  <Button color="light">See my work</Button>
+                  <Button variant="outline-warning">See my work</Button>
                 </a>
               </div>
               

@@ -1,5 +1,34 @@
 // src/data.js
-
+export const projets = [
+  {
+    id: 0,
+    title:'Restaurant Con Fusion',
+    subtitle: 'Bootstrap UI',
+    image: 'assets/images/uthappizza.png',
+    category: 'frontend',
+    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
+ {
+    id: 1,
+    title:'Restaurant Con Fusion',
+    subtitle: 'React JS',
+    image: 'assets/images/uthappizza.png',
+    category: 'frontend',
+    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
+ {
+    id: 2,
+    title:'Chat App',
+    subtitle: 'Django',
+    image: 'assets/images/uthappizza.png',
+    category: 'backend',
+    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
+ {
+    id: 3,
+    title:'Ads Management',
+    subtitle: 'Django',
+    image: 'assets/images/uthappizza.png',
+    category: 'backend',
+    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
+ ];
 export const projects = [
     {
       title: "React Reserve",
