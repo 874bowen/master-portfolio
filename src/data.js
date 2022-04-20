@@ -4,29 +4,33 @@ export const projets = [
     id: 0,
     title:'Restaurant Con Fusion',
     subtitle: 'Bootstrap UI',
-    image: 'assets/images/uthappizza.png',
+    image: './images/conF-bootstrap.jpg',
     category: 'frontend',
+    link: "https://reactbootcamp.com",
     description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
  {
     id: 1,
     title:'Restaurant Con Fusion',
     subtitle: 'React JS',
-    image: 'assets/images/uthappizza.png',
+    image: './images/react-conF.jpg',
     category: 'frontend',
+    link: "https://reactbootcamp.com",
     description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
  {
     id: 2,
     title:'Chat App',
     subtitle: 'Django',
-    image: 'assets/images/uthappizza.png',
+    image: './images/dj-ads.jpg',
     category: 'backend',
+    link: "https://reactbootcamp.com",
     description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
  {
     id: 3,
     title:'Ads Management',
     subtitle: 'Django',
-    image: 'assets/images/uthappizza.png',
+    image: './images/react-conF.jpg',
     category: 'backend',
+    link: "https://reactbootcamp.com",
     description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
  ];
 export const projects = [
@@ -35,7 +39,7 @@ export const projects = [
       subtitle: "MERN Stack",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/bowen.jpeg",
+      image: "./images/react-conF.jpg",
       link: "https://reactbootcamp.com",
     },
     {
@@ -43,7 +47,7 @@ export const projects = [
       subtitle: "React and Python",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/bowen.jpeg",
+      image: "./images/dj-ads.jpg",
       link: "https://reedbarger.com",
     },
     {
@@ -51,7 +55,7 @@ export const projects = [
       subtitle: "React and Firebase",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/bowen.jpeg",
+      image: "./images/conF-bootstrap.jpg",
       link: "https://jsbootcamp.com",
     },
     {
@@ -59,7 +63,7 @@ export const projects = [
       subtitle: "React Hooks",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-      image: "./images/bowen.jpeg",
+      image: "./images/react-conF.jpg",
       link: "https://pythonbootcamp.com",
     },
   ];
