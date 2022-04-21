@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Media } from 'reactstrap';
-import { projects } from "../data";
+import { Media, Card, CardImg, CardImgOverlay, CardBody, CardText, CardTitle } from 'reactstrap';
+
 
 class Project extends Component {
 
@@ -9,57 +9,21 @@ class Project extends Component {
 
         // state stores properties inside this component
         this.state = {
-            projects : [
-                {
-                  id: 0,
-                  title:'Restaurant Con Fusion',
-                  subtitle: 'Bootstrap UI',
-                  image: './images/conF-bootstrap.jpg',
-                  category: 'frontend',
-                  link: "https://reactbootcamp.com",
-                  description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
-               {
-                  id: 1,
-                  title:'Restaurant Con Fusion',
-                  subtitle: 'React JS',
-                  image: './images/react-conF.jpg',
-                  category: 'frontend',
-                  link: "https://reactbootcamp.com",
-                  description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
-               {
-                  id: 2,
-                  title:'Chat App',
-                  subtitle: 'Django',
-                  image: './images/dj-ads.jpg',
-                  category: 'backend',
-                  link: "https://reactbootcamp.com",
-                  description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        },
-               {
-                  id: 3,
-                  title:'Ads Management',
-                  subtitle: 'Django',
-                  image: './images/react-conF.jpg',
-                  category: 'backend',
-                  link: "https://reactbootcamp.com",
-                  description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                        
-                }
-            ]
         } 
     }
 
     render(){
-        const project = this.state.projects.map((proj) =>{
+        const project = this.props.projects.map((proj) =>{
             return(
-                <div key={proj.id} className="col-12 mt-5">
-                    <Media tag="li">
-                        <Media left middle>
-                            <Media object width="100%" src={proj.image} alt={proj.subtitle}/>
-                        </Media>
-                        <Media body className="ml-5">
-                            <Media heading className="text-success">{proj.title} --<span className="text-warning"> {proj.subtitle} </span></Media>
-                            <p>{proj.description}</p>
-                        </Media>
-                    </Media>
+                <div key={proj.id} className="col-12 col-md-6 mt-2 mb-2">
+                    <Card tag="li">
+                        <CardImg width="100%" src={proj.image} alt={proj.subtitle}/>
+                        
+                        <CardImgOverlay>
+                            <CardTitle >{proj.title} --<span className="text-warning"> {proj.subtitle} </span></CardTitle>
+                            {/* <p>{proj.description}</p> */}
+                        </CardImgOverlay>
+                    </Card>
                 </div>
             );
         });
@@ -70,9 +34,7 @@ class Project extends Component {
                         <h1 className="text-center text-white">
                         Apps I've Built
                         </h1>
-                        <Media list>
-                            {project}
-                        </Media>
+                        {project}
                     </div>
                 </div>
                 <section class="proj-bcg">
