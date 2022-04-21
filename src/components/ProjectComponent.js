@@ -9,16 +9,39 @@ class Project extends Component {
 
         // state stores properties inside this component
         this.state = {
-        } 
+            selectedProject : null
+        }
+    }
+    onProjectSelect(project){
+        this.setState({selectedProject: project});
+    }
+
+    renderProject(project){
+        
+        if (project != null){
+            return(
+                <Card>
+                    <CardImg width="100%" src={project.image} alt={project.subtitle}/>
+                    <CardBody>
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardText>{project.description}</CardText>
+                    </CardBody>
+                </Card>
+            );
+        }
+        else{
+            return(
+                <div></div>
+            );
+        }
     }
 
     render(){
         const project = this.props.projects.map((proj) =>{
             return(
                 <div key={proj.id} className="col-12 col-md-6 mt-2 mb-2">
-                    <Card tag="li">
+                    <Card onClick={() => this.onProjectSelect(proj)}>
                         <CardImg width="100%" src={proj.image} alt={proj.subtitle}/>
-                        
                         <CardImgOverlay>
                             <CardTitle >{proj.title} --<span className="text-warning"> {proj.subtitle} </span></CardTitle>
                             {/* <p>{proj.description}</p> */}
@@ -35,6 +58,9 @@ class Project extends Component {
                         Apps I've Built
                         </h1>
                         {project}
+                    </div>
+                    <div className="row">
+                        {this.renderProject(this.state.selectedProject)}
                     </div>
                 </div>
                 <section class="proj-bcg">
