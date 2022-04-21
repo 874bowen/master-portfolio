@@ -1,17 +1,24 @@
 import React, { Component } from "react";
-import { Media, Card, CardImg, CardImgOverlay, CardBody, CardText, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardBody, CardText, CardTitle } from 'reactstrap';
+import ProjectDetail from "./ProjectDetailComponent";
 
 
 class Project extends Component {
 
     constructor(props){
-        super(props)
+        super(props);
 
         // state stores properties inside this component
         this.state = {
             selectedProject : null
         }
+        // console.log("Project Component constructor is invoked");
     }
+
+    // componentDidMount(){
+    //     console.log("Project Component componentDidMount() is invoked");
+    // }
+
     onProjectSelect(project){
         this.setState({selectedProject: project});
     }
@@ -50,6 +57,7 @@ class Project extends Component {
                 </div>
             );
         });
+        // console.log("Project Component render is invoked");
         return(
             <section id="projects">
                 <div className="container">
@@ -60,7 +68,8 @@ class Project extends Component {
                         {project}
                     </div>
                     <div className="row">
-                        {this.renderProject(this.state.selectedProject)}
+                        <ProjectDetail project={this.state.selectedProject} comments={this.props.projects.comments}/>
+                        {/* {this.renderProject(this.state.selectedProject)} */}
                     </div>
                 </div>
                 <section class="proj-bcg">
@@ -73,6 +82,8 @@ class Project extends Component {
             </section>
             
         );
+        
     }
+    
 }
 export default Project;

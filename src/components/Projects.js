@@ -2,7 +2,7 @@
 
 import React from "react";
 import { projects } from "../data";
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+
 
 
 export default function Projects() {
