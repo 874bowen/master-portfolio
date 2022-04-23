@@ -51,6 +51,9 @@ body {
   background-color: #333942;
   color: white;
 }
+#gif{
+  width: 70%;
+}
 .brick{
   color: #d35d5d;
 }
