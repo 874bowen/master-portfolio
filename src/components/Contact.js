@@ -9,9 +9,14 @@ export default function Contact() {
   return (
     <section id="contact" className="relative">
       <div className="text-white container">
-        <div className="text-white row">
+        <div className="text-white row d-flex justify-content-around">
           <div className="col-md-4">
-          <iframe
+          <iframe 
+            width="100%"
+            height="100%"
+            title="map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36875.638023172236!2d35.21908953913437!3d0.5238093037850862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178100ffde90ef4d%3A0x21d83ce812e53d6b!2sPioneer%20Estate%20Eldoret!5e0!3m2!1sen!2ske!4v1650696858978!5m2!1sen!2ske"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"/>
+          {/* <iframe
             width="100%"
             height="100%"
             title="map"
@@ -21,9 +26,9 @@ export default function Contact() {
             // marginWidth={0}
             style={{ filter: "opacity(0.7)" }}
             src="https://www.google.com/maps/embed/v1/place?q=97+warren+st+new+york+city&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-          />
+          /> */}
           </div>
-          <div className="col-md-5 text-center">
+          <div className="col-md-5 align-self-center">
           <h5> Address</h5>
                     <address>
 		              30100, Eldoret<br />
