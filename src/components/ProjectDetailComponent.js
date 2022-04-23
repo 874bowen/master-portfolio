@@ -34,17 +34,23 @@ class ProjectDetail extends Component {
     renderComments(comments){
         const project = comments.map((comment) =>{
             return(
-                <div key={comment.id}>
-                    {comment.comment},
-                    {comment.author},
-                    {comment.date}
+                <li key={comment.id}>
+                    <span>{comment.comment}</span>
+                    <p> -- {comment.author}, 
+                    &nbsp;
+                    {new Intl.DateTimeFormat('en-US', {
+                        year: "numeric",
+                        month: "long",
+                        day: "2-digit"
+                    }).format(new Date(comment.date))}
+                    </p>
 
-                </div>
+                </li>
             );
         });
         return(
             <div className="col-md-6">
-                <h1>Comments</h1>
+                <h1 className="text-warning">Comments</h1>
                 {project}
                 </div>
         );
