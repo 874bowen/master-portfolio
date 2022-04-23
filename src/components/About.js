@@ -16,15 +16,15 @@ export default function About() {
               <p className="">
               Enthusiastic Web developer eager to contribute to team success through hard work, attention to detail and excellent organizational skills. Clear understanding of web development and designing and training in Responsive Web Design. Motivated to learn, grow and excel in Technology.
               </p>
-              <div className="flex justify-center">
+              <div className="d-flex justify-content-between">
                 <a
                   href="#contact"
-                  className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+                  className="rounded text-lg">
                   <Button variant="outline-success">Work with me</Button>
                 </a>
                 <a
                   href="#projects"
-                  className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+                  className="rounded text-lg float-right">
                   <Button variant="outline-warning">See my work</Button>
                 </a>
               </div>
