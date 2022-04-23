@@ -6,6 +6,7 @@ export const PROJECTS = [
       image: './images/conF-bootstrap.jpg',
       category: 'frontend',
       link: "https://reactbootcamp.com",
+      gif: './images/bootstrap-con.gif',
       description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',     
       comment: [
         {
@@ -55,6 +56,7 @@ export const PROJECTS = [
       image: './images/react-conF.jpg',
       category: 'frontend',
       link: "https://reactbootcamp.com",
+      gif: './images/bootstrap-con.gif',
       description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
       comment: [
       {
@@ -105,6 +107,7 @@ export const PROJECTS = [
       image: './images/dj-ads.jpg',
       category: 'backend',
       link: "https://reactbootcamp.com",
+      gif: './images/bootstrap-con.gif',
       description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
       comment: [
         {
@@ -155,6 +158,7 @@ export const PROJECTS = [
       image: './images/react-conF.jpg',
       category: 'backend',
       link: "https://reactbootcamp.com",
+      gif: './images/bootstrap-con.gif',
       description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
       comment: [
         {
