@@ -10,6 +10,17 @@ class ProjectDetail extends Component {
         }
 
     }
+    renderGif(gif){
+        
+        if (gif != null){
+            return(
+                <div id="gif" className="row mx-auto d-block">
+                    <CardImg width="75%" src={gif} alt=""/>
+                </div>
+            );
+        }
+        
+    }
     renderProject(project){
         
         if (project != null){
@@ -62,12 +73,16 @@ class ProjectDetail extends Component {
         if(projectDetail == null){
             return (<div></div>);
         }
+        const giphy = this.renderGif(projectDetail.gif)
         const renderComment = this.renderComments(projectDetail.comment)
         const renderProj = this.renderProject(projectDetail);
         return(
-            <div className="row">
+            <div>
+                {giphy}
+                <div className="row">
                 {renderProj}
                 {renderComment}
+                </div>
             </div>
             
             // <renderProject />

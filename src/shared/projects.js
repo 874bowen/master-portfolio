@@ -3,7 +3,7 @@ export const PROJECTS = [
       id: 0,
       title:'Restaurant Con Fusion',
       subtitle: 'Bootstrap UI',
-      image: './images/conF-bootstrap.jpg',
+      image: './images/react-conF.jpg',
       category: 'frontend',
       link: "https://reactbootcamp.com",
       gif: './images/bootstrap-con.gif',
