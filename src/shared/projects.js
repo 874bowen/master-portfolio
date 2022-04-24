@@ -51,10 +51,10 @@ export const PROJECTS = [
         }]                   },
    {
       id: 1,
-      title:'Restaurant Con Fusion',
-      subtitle: 'React JS',
-      image: './images/react-conF.jpg',
-      category: 'frontend',
+      title:'Code Snippets App',
+      subtitle: 'Djangorestframework',
+      image: './images/django-rest.jpg',
+      category: 'backend',
       link: "https://reactbootcamp.com",
       gif: './images/bootstrap-con.gif',
       description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
@@ -102,7 +102,7 @@ export const PROJECTS = [
     ]},
    {
       id: 2,
-      title:'Chat App',
+      title:'Ads Management',
       subtitle: 'Django',
       image: './images/dj-ads.jpg',
       category: 'backend',
@@ -153,9 +153,9 @@ export const PROJECTS = [
       ]                         },
    {
       id: 3,
-      title:'Ads Management',
-      subtitle: 'Django',
-      image: './images/react-conF.jpg',
+      title:'Con Fusion Restaurant',
+      subtitle: 'Bootstrap-UI',
+      image: './images/conF-bootstrap.jpg',
       category: 'backend',
       link: "https://reactbootcamp.com",
       gif: './images/bootstrap-con.gif',
@@ -202,5 +202,57 @@ export const PROJECTS = [
             date: "2011-12-02T17:57:28.556094Z"
         }
     ]                       
-    }
+    },
+    {
+        id: 4,
+        title:'Social-Media Posts',
+        subtitle: 'Bootstrap-UI',
+        image: './images/fast-API.jpg',
+        category: 'backend',
+        link: "https://reactbootcamp.com",
+        gif: './images/bootstrap-con.gif',
+        description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+        comment: [
+          {
+              id: 20,
+              dishId: 3,
+              rating: 5,
+              comment: "Imagine all the eatables, living in conFusion!",
+              author: "John Lemon",
+              date: "2012-10-16T17:57:28.556094Z"
+          },
+          {
+              id: 21,
+              dishId: 3,
+              rating: 4,
+              comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+              author: "Paul McVites",
+              date: "2014-09-05T17:57:28.556094Z"
+          },
+          {
+              id: 22,
+              dishId: 3,
+              rating: 3,
+              comment: "Eat it, just eat it!",
+              author: "Michael Jaikishan",
+              date: "2015-02-13T17:57:28.556094Z"
+          },
+          {
+              id: 23,
+              dishId: 3,
+              rating: 4,
+              comment: "Ultimate, Reaching for the stars!",
+              author: "Ringo Starry",
+              date: "2013-12-02T17:57:28.556094Z"
+          },
+          {
+              id: 24,
+              dishId: 3,
+              rating: 2,
+              comment: "It's your birthday, we're gonna party!",
+              author: "25 Cent",
+              date: "2011-12-02T17:57:28.556094Z"
+          }
+      ]                       
+      }
 ]

@@ -45,7 +45,11 @@ body {
   background-color: #202731;
 }
 #projects{
-  background-color: #d35d5d;
+  background-color: antiquewhite;
+  /* background-color: #d35d5d; */
+}
+#projectdetail{
+  background-color: antiquewhite;
 }
 #navba{
   background-color: #333942;
@@ -78,7 +82,7 @@ body {
 }
 
 .custom-shape-divider-bottom-1650314778 .shape-fill {
-  fill: #d35d5d;
+  fill: antiquewhite;
 }
 .proj-bcg {
   position: relative;
