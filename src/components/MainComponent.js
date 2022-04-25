@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import About from "./About";
-import Contact from "./Contact";
-import Navbar from "./Navbar";
-
+import Footer from "./FooterComponent";
 import Project from './ProjectComponent';
 import Testimonials from "./Testimonials";
 import { PROJECTS } from "../shared/projects";
 import ProjectDetail from './ProjectDetailComponent';
+import Header from './HeaderComponent';
+import Contact from './ContactComponent';
+import { Routes, Route} from 'react-router-dom';
 class Main extends Component {
   constructor(props){
     super(props);
@@ -24,12 +24,17 @@ class Main extends Component {
   render(){
     return (
       <main>
-        <Navbar />
-        <About />
-        <Project projects= {this.state.projects} onClick={(projectId) => this.onProjectSelect(projectId)}/>
-        <ProjectDetail project={this.state.projects.filter((project) => project.id === this.state.selectedProject)[0]}/>
+        <Header />
+        <Routes>
+          <Route path="/home" element={<Project projects={this.state.projects} onClick={(projectId) => this.onProjectSelect(projectId)}/> } />
+          <Route path="/project" element={<ProjectDetail project={this.state.projects.filter((project) => project.id === this.state.selectedProject)[0]}/>} />
+          <Route path="/contact" element={<Contact />}/>
+        </Routes>
+        {/* <Project projects= {this.state.projects} onClick={(projectId) => this.onProjectSelect(projectId)}/>
+        <ProjectDetail project={this.state.projects.filter((project) => project.id === this.state.selectedProject)[0]}/> */}
+        
         <Testimonials />
-        <Contact />
+        <Footer />
       </main>
     );
   }
