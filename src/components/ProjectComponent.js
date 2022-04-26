@@ -1,14 +1,17 @@
 import React from "react";
-import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { Link } from "react-router-dom";
+import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 function RenderProjectItem({proj, onClick}){  // this is one way of having functional components  
     return(
-        <Card onClick={() => onClick(proj.id)}>
-            <CardImg width="100%" src={proj.image} alt={proj.subtitle}/>
-            <CardImgOverlay>
-                <CardTitle >{proj.title} --<span className="text-warning"> {proj.subtitle} </span></CardTitle>
-                {/* <p>{proj.description}</p> */}
-            </CardImgOverlay>
+        <Card>
+            <Link to={`/projects/${proj.id}`}>
+                <CardImg width="100%" src={proj.image} alt={proj.subtitle}/>
+                <CardImgOverlay>
+                    <CardTitle >{proj.title} --<span className="text-warning"> {proj.subtitle} </span></CardTitle>
+                    {/* <p>{proj.description}</p> */}
+                </CardImgOverlay>
+            </Link>
         </Card>
     );
 }
@@ -19,7 +22,7 @@ const Project = (props) => {  // this is another way of having functional compon
     const project = props.projects.map((proj) =>{
         return(
             <div key={proj.id} className="col-12 col-md-6 mt-2 mb-2">
-                <RenderProjectItem proj={proj} onClick={props.onClick}/>
+                <RenderProjectItem proj={proj}/>
             </div>
         );
     });
@@ -28,9 +31,13 @@ const Project = (props) => {  // this is another way of having functional compon
         <section id="projects">
             <div className="container">
                 <div className="row">
-                    <h1 className="text-center">
-                    Apps I've Built
-                    </h1>
+                    <Breadcrumb>
+                        <BreadcrumbItem><Link to="/">Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>Projects</BreadcrumbItem>
+                    </Breadcrumb>
+                    <h3 className="text-center">
+                    Projects
+                    </h3>
                     {project}
                 </div>
                 <div className="row">
@@ -38,7 +45,7 @@ const Project = (props) => {  // this is another way of having functional compon
                     {/* {this.renderProject(this.state.selectedProject)} */}
                 </div>
             </div>
-            
+
         </section>
         
     );
