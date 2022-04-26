@@ -1,12 +1,16 @@
 import React from "react";
-import { Card, CardImg, CardBody, CardText, CardTitle } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Card, CardImg, CardBody, CardText, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import  { useParams } from 'react-router-dom';
+
 
 function RenderGiphy({gif}){
     
     if (gif != null){
+        console.log("found gif");
         return(
             <div id="gif" className="row mx-auto d-block">
-                <CardImg width="75%" src={gif} alt=""/>
+                <CardImg width="75%" src={`/${gif}`} alt=""/>
             </div>
         );
     }
@@ -18,7 +22,7 @@ function RenderProject({project}){
         return(
             <div className="col-md-6">
                 <Card>
-                    <CardImg width="100%" src={project.image} alt={project.subtitle}/>
+                    <CardImg width="100%" src={`/${project.image}`} alt={project.subtitle}/>
                     <CardBody>
                         <CardTitle>{project.title}</CardTitle>
                         <CardText>{project.description}</CardText>
@@ -34,6 +38,7 @@ function RenderProject({project}){
     }
 }
 function RenderComments({comments}){
+
     const project = comments.map((comment) =>{
         return(
             <li key={comment.id}>
@@ -60,19 +65,35 @@ function RenderComments({comments}){
 }
 const ProjectDetail = (props) => {
     console.log("ProjectDetail Component render() is invoked");
-    const projectDetail = props.project;
+    let params = useParams();
+    var x = params.projectId;
+    console.log(x);
+    const projectDetail = props.projects;
     console.log(projectDetail)
     if(projectDetail == null){
         return (<div></div>);
     }
-    
+    var project=props.projects.filter((project) => project.id === parseInt(params.projectId,10))[0]
+    var comment=props.comments.filter((comment) => comment.projectId === parseInt(params.projectId,10))
+    console.log(comment)
     return(
         <section id="projectdetail">
-            <RenderGiphy gif={props.project.gif}/>
+            <div className="container">
+            <div className="row">
+            <Breadcrumb>
+                <BreadcrumbItem><Link to="/projects">Projects</Link></BreadcrumbItem>
+                <BreadcrumbItem active>{project.title}</BreadcrumbItem>
+            </Breadcrumb>
+            <h3 className="text-center">
+            {project.title}
+            </h3>
+            </div>
+            </div>
+            <RenderGiphy gif={project.gif}/>
             <div className="container">
                 <div className="row">
-                <RenderProject project={props.project}/>
-                <RenderComments comments={props.project.comment}/>
+                <RenderProject project={project}/>
+                <RenderComments comments={comment}/>
                 </div>
             </div>
             <section className="proj-bcg">
