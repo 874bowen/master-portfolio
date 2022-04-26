@@ -10,7 +10,7 @@ class Header extends Component {
             <>
             <Navbar  className="text-white" sticky="top" id="navba" expand="lg">
                 <Container className="text-white">
-                <Navbar.Brand href="#">Ivan Bowen</Navbar.Brand>
+                <Navbar.Brand href="/">Ivan Bowen</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -18,7 +18,8 @@ class Header extends Component {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="/home">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/projects">Projects</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
                         <NavDropdown title="Link" id="navbarScrollingDropdown">
                         <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
@@ -58,13 +59,13 @@ class Header extends Component {
               </p>
               <div className="d-flex justify-content-between">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="rounded text-lg">
                   <Button variant="outline-success">Work with me</Button>
                 </a>
                 <a
-                  href="#projects"
-                  className="rounded text-lg float-right">
+                  href="/projects"
+                  className="rounded text-lg">
                   <Button variant="outline-warning">See my work</Button>
                 </a>
               </div>
@@ -74,7 +75,7 @@ class Header extends Component {
               <img
                 className="rounded mx-auto d-block"
                 alt="hero"
-                src="./images/bowen.jpeg" width="70%"
+                src={`/${'./images/bowen.jpeg'}`} width="70%"
               />
             </div>
             
