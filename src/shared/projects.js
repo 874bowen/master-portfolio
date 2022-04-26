@@ -2,12 +2,13 @@ export const PROJECTS = [
     {
       id: 0,
       title:'Restaurant Con Fusion',
-      subtitle: 'Bootstrap UI',
+      subtitle: 'React.js',
       image: './images/react-conF.jpg',
       category: 'frontend',
       link: "https://reactbootcamp.com",
       gif: './images/bootstrap-con.gif',
-      description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',     
+      description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+      featured: false,     
       },
    {
       id: 1,
@@ -18,6 +19,7 @@ export const PROJECTS = [
       link: "https://reactbootcamp.com",
       gif: './images/bootstrap-con.gif',
       description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+      featured: false,
       },
    {
       id: 2,
@@ -28,6 +30,7 @@ export const PROJECTS = [
       link: "https://reactbootcamp.com",
       gif: './images/bootstrap-con.gif',
       description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+      featured: true,
       },
    {
       id: 3,
@@ -37,7 +40,8 @@ export const PROJECTS = [
       category: 'backend',
       link: "https://reactbootcamp.com",
       gif: './images/bootstrap-con.gif',
-      description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',                     
+      description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+      featured: false,                     
     },
     {
         id: 4,
@@ -47,6 +51,7 @@ export const PROJECTS = [
         category: 'backend',
         link: "https://reactbootcamp.com",
         gif: './images/bootstrap-con.gif',
-        description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',                     
+        description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',   
+        featured: false,                  
       }
 ]
