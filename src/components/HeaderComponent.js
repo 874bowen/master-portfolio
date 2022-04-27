@@ -57,16 +57,16 @@ class Header extends Component {
               <p className="">
               Enthusiastic Web developer eager to contribute to team success through hard work, attention to detail and excellent organizational skills. Clear understanding of web development and designing and training in Responsive Web Design. Motivated to learn, grow and excel in Technology.
               </p>
-              <div className="d-flex justify-content-between">
+              <div className="d-flex mb-5 justify-content-between">
                 <a
                   href="/contact"
                   className="rounded text-lg">
-                  <Button variant="outline-success">Work with me</Button>
+                  <Button variant="outline-success"><i className="fa fa-handshake-o"></i> Work with me</Button>
                 </a>
                 <a
                   href="/projects"
                   className="rounded text-lg">
-                  <Button variant="outline-warning">See my work</Button>
+                  <Button variant="outline-warning"><i className="fa fa-eye"></i> See my work</Button>
                 </a>
               </div>
               
