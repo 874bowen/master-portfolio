@@ -96,8 +96,83 @@ function Home(props){
                   <Button variant="outline-success">More Projects</Button>
                 </Link>
                 </div>
-            </div>
-        </section>
+                <div className="py-5 my-5 bg-dark text-white text-center">
+                  <h1 className="fw-bold">Skills</h1>
+                  <div className="col-lg-6 mx-auto">
+                    <p className="lead mb-4">Quickly design and customize responsive mobile-first sites with Ivan, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                      <button type="button" className="btn btn-outline-secondary btn-lg px-4">More about me &raquo;</button>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div className="row mb-4">
+                  <div className="col-md-6 text-center mb-4">
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"80%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">HTML 80%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"50%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">CSS 50%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"60%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">JS 8
+                      60%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"70%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">SQL 70%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"67%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">REACT 67%</div>
+                    </div>
+                  </div>
+                  <div className="col-md-6 text-center mb-4">
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"70%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">PHP 70%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"60%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">POSTGRE 60%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"75%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">PYTHON 75%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"75%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">DJANGO 75%</div>
+                    </div>
+                    <div className="progress mb-3">
+                      <div className="progress-bar progress-bar-animated bg-secondary" role="progressbar" style={{width:"85%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">BOOTSTRAP 85%</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container marketing">
+                <h1 className="fw-boldn text-center">Testimonials</h1>
+                <div className="row">
+                  <div className="col-lg-4 text-center">
+                    <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+                    <h2>Heading</h2>
+                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+
+                  </div>
+                  <div className="col-lg-4 text-center">
+                    <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+                    <h2>Heading</h2>
+                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+
+                  </div>
+                  <div className="col-lg-4 text-center">
+                    <svg className="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+                    <h2>Heading</h2>
+                    <p>And lastly this, the third column of representative placeholder content.</p>
+                  </div>
+                </div>
+
+                <hr className="featurette-divider"/>
+                </div>
+
+                </div>
+</section>
 
     );
 }
