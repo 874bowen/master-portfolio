@@ -5,40 +5,38 @@ import Project from './ProjectComponent';
 import Testimonials from "./Testimonials";
 import { PROJECTS } from "../shared/projects";
 import ProjectDetail from './ProjectDetailComponent';
+import Blogs from './BlogsComponent';
 import Header from './HeaderComponent';
 import Contact from './ContactComponent';
 import { Routes, Route} from 'react-router-dom';
 import { COMMENTS } from '../shared/comments';
+import { BLOGS } from '../shared/blogs';
+import { FEATURES } from '../shared/features';
+import { SKILLS } from '../shared/skills';
 class Main extends Component {
   constructor(props){
     super(props);
 
     this.state = {
       projects: PROJECTS,
-      comments: COMMENTS
+      comments: COMMENTS,
+      features: FEATURES,
+      skills: SKILLS,
+      blogs: BLOGS
     };
   }
 
 
   render(){
-    // const HomePage = () => {
-    //   return(
-    //     <Home />
-    //   );
-    // }
-    // const ProjectWithId = ({match}) => {
-    //   return(
-    //     <ProjectDetail project={this.state.projects.filter((project) => project.id === parseInt(match.params.projectId,10))[0]} comments={this.state.comments.filter((comments) => comments.projectId  === parseInt(match.params.projectId,10))}
-    //     />
-    //   );
-    // }
+    console.log(this.state.skills);
     return (
       <main>
         <Header />
         <Routes>
-          <Route path="/" element={<Home featured={this.state.projects.filter((project) => project.featured)[0]}/>} />
+          <Route path="/" element={<Home featuredProject={this.state.projects.filter((project) => project.featured)[0]} featuredBlog={this.state.blogs.filter((blog) => blog.featured)[0]} features={this.state.features} skills={this.state.skills}/>} />
           <Route exact path="/projects" element={<Project projects={this.state.projects}/> }></Route>
           <Route index path="/projects/:projectId" element={<ProjectDetail projects={this.state.projects} comments={this.state.comments}/> } />
+          <Route exact path="/blogs" element={<Blogs blogs={this.state.blogs}/> }></Route>
           <Route path="*" element={
             <main style={{ padding : "1 rem", backgroundColor: "antiquewhite" }}>
               <h2 className='text-center text-danger'>There is nothing here!</h2>
