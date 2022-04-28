@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <section className="relative">
       <div className="text-white container">
-        <div className="text-white row d-flex justify-content-around">
+        <div className="mt-5 mb-2 text-white row d-flex justify-content-around">
           <div className="col-md-4">
           <iframe 
             width="100%"
