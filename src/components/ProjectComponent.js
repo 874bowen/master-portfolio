@@ -17,7 +17,9 @@ function RenderProjectItem({proj, onClick}){  // this is one way of having funct
 }
 
 
+
 const Project = (props) => {  // this is another way of having functional components
+
     console.log("Project Component render() is invoked");
     const project = props.projects.map((proj) =>{
         return(
@@ -26,6 +28,7 @@ const Project = (props) => {  // this is another way of having functional compon
             </div>
         );
     });
+
     // console.log("Project Component render is invoked");
     return(
         <section id="projects">
@@ -35,6 +38,14 @@ const Project = (props) => {  // this is another way of having functional compon
                         <BreadcrumbItem><Link to="/">Home</Link></BreadcrumbItem>
                         <BreadcrumbItem active>Projects</BreadcrumbItem>
                     </Breadcrumb>
+                    <div className="toast align-items-center" data-autohide="false" >
+                        <div className="flex">
+                            <div className="toast-body">
+                                Click on a project to view more
+                            </div>
+                            <button type="button" className="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                    </div>
                     <h3 className="text-center">
                     Projects
                     </h3>

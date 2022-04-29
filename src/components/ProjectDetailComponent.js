@@ -9,7 +9,7 @@ function RenderGiphy({gif}){
     if (gif != null){
         console.log("found gif");
         return(
-            <div id="gif" className="row mx-auto d-block">
+            <div id="gif" className="mb-4 row mx-auto d-block">
                 <CardImg width="75%" src={`/${gif}`} alt=""/>
             </div>
         );
