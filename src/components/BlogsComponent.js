@@ -3,7 +3,7 @@ import React from "react";
 
 function RenderBlogs({blog}){
     return(
-        <a className="text-decoration-none" target="_blank" href={blog.link}>
+        <a className="text-decoration-none" target="_blank" rel="noopener noreferrer" href={blog.link}>
         <div className="row featurette">
         <div className="col-md-7">
             <small><span className="text-muted">{new Intl.DateTimeFormat('en-US', {
@@ -14,8 +14,8 @@ function RenderBlogs({blog}){
             <h2 className="featurette-heading text-dark">{blog.title}</h2>
             <p className="lead">{blog.description}</p>
         </div>
-        <div className="mt-3 d-none d-md-block col-md-5">
-            <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style={{height: "75%"}} src={`/${blog.image}`} alt={blog.title}/>
+        <div className="mt-4 d-none d-md-block col-md-5">
+            <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style={{height: "80%"}} src={`/${blog.image}`} alt={blog.title}/>
 
       </div>
         </div>

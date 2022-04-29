@@ -20,8 +20,9 @@ class Header extends Component {
                     >
                         <Nav.Link className="text-warning" href="/">Home</Nav.Link>
                         <Nav.Link className="text-warning" href="/projects">Projects</Nav.Link>
-                        <Nav.Link className="text-warning" href="/contact">Contact</Nav.Link>
+                        <Nav.Link className="text-warning" href="/about">About</Nav.Link>
                         <Nav.Link className="text-warning" href="/blogs">Blogs</Nav.Link>
+                        <Nav.Link className="text-warning" href="/contact">Contact</Nav.Link>
                         <NavDropdown className="text-white" title="Link" id="navbarScrollingDropdown">
                         <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>

@@ -42,6 +42,11 @@ export default function Footer() {
             
           </div>
           <div className="col-12 col-sm-4 col-md-3 align-self-center">
+          <div className=" mb-3 btn-group" role="group">
+                        <a role="button" className="btn btn-primary" href="tel:+254791440095"><i className="fa fa-phone"></i> Call</a>
+                        <a role="button" className="btn btn-info" href="tel:+254791440095"><i className="fa fa-skype"></i> Skype</a>
+                        <a role="button" className="btn btn-success" href="mailto:bowenivan16@gmail.com"><i className="fa fa-envelope-o"></i> Email</a>
+                    </div>
           <div className="text-center">
                         <a className="btn btn-social-icon btn-google" href="http://google.com/+"><i className="fa fa-instagram"></i></a>
                         <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i className="fa fa-facebook"></i></a>
