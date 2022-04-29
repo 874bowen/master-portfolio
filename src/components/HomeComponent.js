@@ -80,7 +80,7 @@ function Home(props){
                     </div>
                     <div className="col-md-6">
                         <Card>
-                            <CardImg width="100%" src={`/${props.featuredBlog.image}`} alt={props.featuredBlog.subtitle}/>
+                            <CardImg width="100%" src={`/${'./images/docstings.jpg'}`} alt={props.featuredBlog.subtitle}/>
                             <CardImgOverlay><Link
                               to="/blogs"
                               className="rounded text-lg float-right">
@@ -98,7 +98,8 @@ function Home(props){
                   <div className="col-lg-6 mx-auto">
                     <p className="lead mb-4">Quickly design and customize responsive mobile-first sites with Ivan, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
                     <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                      <button type="button" className="btn btn-outline-secondary btn-lg px-4">More about me &raquo;</button>
+                      <Link to="/about">
+                      <button type="button" className="btn btn-outline-secondary btn-lg px-4">More about me &raquo;</button></Link>
                     </div>
                   </div>
                   

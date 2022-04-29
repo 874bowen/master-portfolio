@@ -8,6 +8,7 @@ import ProjectDetail from './ProjectDetailComponent';
 import Blogs from './BlogsComponent';
 import Header from './HeaderComponent';
 import Contact from './ContactComponent';
+import About from './AboutComponent';
 import { Routes, Route} from 'react-router-dom';
 import { COMMENTS } from '../shared/comments';
 import { BLOGS } from '../shared/blogs';
@@ -37,6 +38,7 @@ class Main extends Component {
           <Route exact path="/projects" element={<Project projects={this.state.projects}/> }></Route>
           <Route index path="/projects/:projectId" element={<ProjectDetail projects={this.state.projects} comments={this.state.comments}/> } />
           <Route exact path="/blogs" element={<Blogs blogs={this.state.blogs}/> }></Route>
+          <Route path="/about" element={<About />}/>
           <Route path="*" element={
             <main style={{ padding : "1 rem", backgroundColor: "antiquewhite" }}>
               <h2 className='text-center text-danger'>There is nothing here!</h2>
