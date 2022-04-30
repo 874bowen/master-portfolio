@@ -10,7 +10,7 @@ function RenderFeatures({features}){
       <div className="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
         <div className="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
           <h3 className="dev pt-2 mt-3 display-8 lh-1 fw-bold">{feature.sector}<br/> development</h3>
-          <p className="pt-5">{feature.description}</p>
+          <p className="pt-3">{feature.description}</p>
           <ul className="d-flex list-unstyled mt-auto">
             <li className="me-auto">
               <img src={`/${feature.image}`} alt="ivan" width="32" height="32" className="rounded-circle border border-white"/>
@@ -74,7 +74,7 @@ function Home(props){
                             </Link></CardImgOverlay>
                             <CardBody>
                                 <CardTitle>{props.featuredProject.title}</CardTitle>
-                                <CardText>{props.featuredProject.description}</CardText>
+                                <CardText>{props.featuredProject.shortdesc}</CardText>
                             </CardBody>
                         </Card>
                     </div>
@@ -94,9 +94,10 @@ function Home(props){
                     </div>
                 </div>
                 <div className="py-5 my-5 bg-dark text-white text-center">
+               {process.env.REACT_APP_MY_API_KEY}
                   <h1 className="fw-bold">Skills</h1>
                   <div className="col-lg-6 mx-auto">
-                    <p className="lead mb-4">Quickly design and customize responsive mobile-first sites with Ivan, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    <p className="lead mb-4">I have been able to acquire skills in crucial sectors of programming Web development being on the highest tier. Team leadership and good communication skills are some of my soft skills. Still ready to learn more. Currently interested in Cloud Computing.<br/> Call me the <i>Cloud Chaser</i> :)</p>
                     <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
                       <Link to="/about">
                       <button type="button" className="btn btn-outline-secondary btn-lg px-4">More about me &raquo;</button></Link>
@@ -109,24 +110,24 @@ function Home(props){
                 <h1 className="mb-5 fw-boldn text-center">Testimonials</h1>
                 <div className="row">
                   <div className="col-lg-4 text-center">
-                  <img src={`/${'./images/bowen.jpeg'}`} alt="ivan" width="75" height="100" className="rounded-circle border border-white"/>
+                  <img src={`/${'./images/woman.jpg'}`} alt="Becky" width="75" height="100" className="rounded-circle border border-white"/>
 
-                    <h2>Heading</h2>
-                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-
-                  </div>
-                  <div className="col-lg-4 text-center">
-                  <img src={`/${'./images/bowen.jpeg'}`} alt="ivan" width="75" height="100" className="rounded-circle border border-white"/>
-
-                    <h2>Heading</h2>
-                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                    <h3>Becky</h3>
+                    <p><i>"It’s obvious he takes tremendous pride in his work, and I wouldn’t hesitate to recommend or work with him again."</i></p>
 
                   </div>
                   <div className="col-lg-4 text-center">
-                  <img src={`/${'./images/bowen.jpeg'}`} alt="ivan" width="75" height="100" className="rounded-circle border border-white"/>
+                  <img src={`/${'./images/man.jpg'}`} alt="francis" width="75" height="100" className="rounded-circle border border-white"/>
 
-                    <h2>Heading</h2>
-                    <p>And lastly this, the third column of representative placeholder content.</p>
+                    <h3>Francis</h3>
+                    <p><i>"Ivan is an authority on web development and is clearly in the upper percentile in terms of developer qualifications."</i></p>
+
+                  </div>
+                  <div className="col-lg-4 text-center">
+                  <img src={`/${'./images/woman.png'}`} alt="miriam" width="75" height="100" className="rounded-circle border border-white"/>
+
+                    <h3>Miriam</h3>
+                    <p><i>"The work we received from him was top-notch, thoroughly documented, and full of touches that show his commitment to quality."</i></p>
                   </div>
                 </div>
 
