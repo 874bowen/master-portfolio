@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
 
 function About(){
+    const testRef = useRef();
+    useEffect(() => {
+        testRef.current.scrollIntoView({behavior: "smooth"});
+    });
     return(
         <section id="aboutme">
             <div className="p-5 mb-4 rounded-3">
-            <div className="col-md-10 mx-auto fs-4 container-fluid py-5">
+            <div ref={testRef} className="col-md-10 mx-auto fs-4 container-fluid py-5">
             <Breadcrumb>
                 <BreadcrumbItem><Link to="/">Home</Link></BreadcrumbItem>
                 <BreadcrumbItem active>Projects</BreadcrumbItem>
@@ -26,7 +30,7 @@ function About(){
                 <li>Maintaining a thorough understanding of foundational technology and rely on tools and frameworks where they will best serve your needs, rather than treating them as the be-all and end-all.</li>
                 </ul>
                 After I understand your needs, I can apply my years of experience to recommend the best tools and development methods for you. Often, the most straightforward approach is the most effective. The long-term viability of web development is also important to me. We can reduce the footprint of what we produce on the web by ensuring that we work in the most efficient ways possible.</p>
-                
+                <p>The HeathIT hackathon was one of the successful hackathons I took part in this year. We were given a challenge to upgrade the entire web application, Child Protection information Management System(CPIMS) from Python 2.17 to 3.10 and Django 1.18 to Django 4.0 and generate tests. I was the team lead of Incognito, our team’s name and our team successfully delivered. I acquired unit testing skills, documentation practices in Python and advanced my git skills. <a href='https://github.com/uonafya/cpims-dcs-3.0.git' target="_blank" rel="noopener noreferrer">This is a link to the github repo</a></p>
             </div>
             </div>
         </section>
