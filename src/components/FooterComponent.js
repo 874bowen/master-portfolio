@@ -42,17 +42,17 @@ export default function Footer() {
             
           </div>
           <div className="col-12 col-sm-4 col-md-3 align-self-center">
-          <div className=" mb-3 btn-group" role="group">
+          <div className="text-center mb-3">
                         <a role="button" className="btn btn-primary" href="tel:+254791440095"><i className="fa fa-phone"></i> Call</a>
                         <a role="button" className="btn btn-info" href="tel:+254791440095"><i className="fa fa-skype"></i> Skype</a>
                         <a role="button" className="btn btn-success" href="mailto:bowenivan16@gmail.com"><i className="fa fa-envelope-o"></i> Email</a>
                     </div>
           <div className="text-center">
-                        <a className="btn btn-social-icon btn-google" href="http://google.com/+"><i className="fa fa-instagram"></i></a>
-                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i className="fa fa-facebook"></i></a>
-                        <a className="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i className="fa fa-linkedin"></i></a>
-                        <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i className="fa fa-twitter"></i></a>
-                        <a className="btn btn-social-icon btn-google" href="http://youtube.com/"><i className="fa fa-github"></i></a>
+                        <a className="btn btn-social-icon btn-google" href="https://instagram.com/_bowe_n" target="_blank" rel="noopener noreferrer"><i className="fa fa-instagram"></i></a>
+                        <a className="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook"></i></a>
+                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/ivan-bowen-7858421ba/" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin"></i></a>
+                        <a className="btn btn-social-icon btn-twitter" href="https://twitter.com/ivan90434131" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter"></i></a>
+                        <a className="btn btn-social-icon btn-google" href="https://github.com/874bowen" target="_blank" rel="noopener noreferrer"><i className="fa fa-github"></i></a>
                         <a className="btn btn-social-icon" href="mailto:"><i className="fa fa-envelope-o"></i></a>
                     </div>
             </div>
