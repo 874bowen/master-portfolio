@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 function RenderProjectItem({proj, onClick}){  // this is one way of having functional components  
+
+
     return(
         <Card>
             <Link to={`/projects/${proj.id}`}>
@@ -29,6 +31,11 @@ const Project = (props) => {  // this is another way of having functional compon
         );
     });
 
+    const testRef = useRef();
+    useEffect(() => {
+        testRef.current.scrollIntoView();
+    });
+    // const scrollTo = () => testRef.current.scrollIntoView();
     // console.log("Project Component render is invoked");
     return(
         <section id="projects">
@@ -46,9 +53,10 @@ const Project = (props) => {  // this is another way of having functional compon
                             <button type="button" className="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                         </div>
                     </div>
+                    <div ref={testRef}>
                     <h3 className="text-center">
                     Projects
-                    </h3>
+                    </h3></div>
                     {project}
                 </div>
                 <div className="row">

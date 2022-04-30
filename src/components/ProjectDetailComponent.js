@@ -1,21 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
 import { Card, CardImg, CardBody, CardText, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import  { useParams } from 'react-router-dom';
 
 
-function RenderGiphy({gif}){
-    
-    if (gif != null){
-        console.log("found gif");
-        return(
-            <div id="gif" className="mb-4 row mx-auto d-block">
-                <CardImg width="75%" src={`/${gif}`} alt=""/>
-            </div>
-        );
-    }
-    
-}
 function RenderProject({project}){
     
     if (project != null){
@@ -24,7 +12,7 @@ function RenderProject({project}){
                 <Card>
                     <CardImg width="100%" src={`/${project.image}`} alt={project.subtitle}/>
                     <CardBody>
-                        <CardTitle>{project.title}</CardTitle>
+                        <CardTitle><strong>{project.title}</strong></CardTitle>
                         <CardText>{project.description}</CardText>
                     </CardBody>
                 </Card>
@@ -57,7 +45,7 @@ function RenderComments({comments}){
     });
     return(
         <div className="col-md-6">
-            <h1 className="text-warning">Comments</h1>
+            <h1 className="text-info">Comments</h1>
             {project}
             </div>
     );
@@ -65,6 +53,10 @@ function RenderComments({comments}){
 }
 const ProjectDetail = (props) => {
     console.log("ProjectDetail Component render() is invoked");
+    const testRef = useRef();
+    useEffect(() => {
+        testRef.current.scrollIntoView();
+    });
     let params = useParams();
     var x = params.projectId;
     console.log(x);
@@ -79,7 +71,7 @@ const ProjectDetail = (props) => {
     return(
         <section id="projectdetail">
             <div className="container">
-            <div className="row">
+            <div ref={testRef} className="row">
             <Breadcrumb>
                 <BreadcrumbItem><Link to="/projects">Projects</Link></BreadcrumbItem>
                 <BreadcrumbItem active>{project.title}</BreadcrumbItem>
@@ -89,7 +81,6 @@ const ProjectDetail = (props) => {
             </h3>
             </div>
             </div>
-            <RenderGiphy gif={project.gif}/>
             <div className="container">
                 <div className="row">
                 <RenderProject project={project}/>

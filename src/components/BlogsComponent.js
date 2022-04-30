@@ -1,10 +1,14 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 
 
 function RenderBlogs({blog}){
+    const testRef = useRef();
+    useEffect(() => {
+        testRef.current.scrollIntoView({behavior: "smooth"});
+    });
     return(
         <a className="text-decoration-none" target="_blank" rel="noopener noreferrer" href={blog.link}>
-        <div className="row featurette">
+        <div ref={testRef} className="row featurette">
         <div className="col-md-7">
             <small><span className="text-muted">{new Intl.DateTimeFormat('en-US', {
                     year: "numeric",
