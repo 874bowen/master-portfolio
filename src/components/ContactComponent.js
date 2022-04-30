@@ -26,7 +26,7 @@ const Contact = () => {
         <div className='container'>
             <div className="mb-3 row row-content">
             <div className="m-auto col-10">
-            <h3 className='mb-3 mt-3 text-center'>Send us your Feedback</h3>
+            <h3 className='mb-3 mt-3 text-center'>Send me your Feedback</h3>
             </div>
             <div className="col-10 col-md-10 m-auto">
             <form ref={form} onSubmit={sendEmail}>
