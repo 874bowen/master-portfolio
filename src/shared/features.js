@@ -2,7 +2,7 @@ export const FEATURES = [
     {
         id: 0,
         sector:'Front-end',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Responsive websites built for an optimal user experience that achieves your business goals. Fast, easy to find, and reach the widest audience possible.',
         image: './images/bowen.jpeg',
         motivation: "#creativity",
         framework: 'react.js'     
@@ -10,17 +10,17 @@ export const FEATURES = [
     {
         id: 1,
         sector:'API',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Share data or functionality and expose only those parts other programmers will find useful and keep them consistent even if the internal details later change.',
         image: './images/bowen.jpeg',
-        motivation: "#communication",
+        motivation: "#authentic",
         framework: 'FastAPI'     
     },
     {
         id: 2,
         sector:'Back-end',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        description: 'Create, maintain, test, and debug the entire back end of your website.Everything from the core application logic, databases, and other back end processes.',
         image: './images/bowen.jpeg',
-        motivation: "#authentic",
+        motivation: "#communication",
         framework: 'Django'     
     }
 ]
