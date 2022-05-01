@@ -3,6 +3,7 @@ import { Container, Navbar, NavDropdown, FormControl, Nav,
     Button,
     Form} from 'react-bootstrap';
 
+// Header HeaderComponent.js
 class Header extends Component {
 
     render() {
