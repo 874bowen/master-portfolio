@@ -1,6 +1,6 @@
 import React, {useRef, useEffect} from "react";
 
-
+// blogs BlogsComponent.js
 function RenderBlogs({blog}){
     const testRef = useRef();
     useEffect(() => {
