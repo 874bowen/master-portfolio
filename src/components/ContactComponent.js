@@ -1,23 +1,22 @@
 import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
-
+// contact ContactComponent.js
 const Contact = () => {
   const form = useRef();
-
-  
-
+//   const btnRef = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs.sendForm(process.env.REACT_APP_USER_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
+        //   form.reset();
           alert("Thank you for your feedback");
       }, (error) => {
           console.log(error.text);
       });
   };
+
   useEffect(() => {
     form.current.scrollIntoView({behavior: "smooth"});
   });
@@ -82,8 +81,6 @@ const Contact = () => {
                         </div>
                     </div>
             </form>
-            </div>
-            <div className="col-12 col-md">
             </div>
             </div>
 </div>
