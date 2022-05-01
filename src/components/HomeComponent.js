@@ -3,6 +3,7 @@ import { Card, CardImg, CardBody, CardImgOverlay, CardText, CardTitle } from 're
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+// Home HomeComponent.js
 function RenderFeatures({features}){
   const feates = features.map((feature) => {
     return(
