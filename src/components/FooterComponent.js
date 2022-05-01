@@ -1,6 +1,6 @@
 // src/components/Contact.js
 
-// src/components/Contact.js
+// Footer FooterComponent.js
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 import React from "react";
