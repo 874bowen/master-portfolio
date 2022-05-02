@@ -7,11 +7,11 @@ const Contact = () => {
 //   const btnRef = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
+    alert("Thank you for your feedback");
     emailjs.sendForm(process.env.REACT_APP_USER_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
         //   form.reset();
-          alert("Thank you for your feedback");
       }, (error) => {
           console.log(error.text);
       });
