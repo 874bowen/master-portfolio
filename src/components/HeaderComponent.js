@@ -26,9 +26,8 @@ class Header extends Component {
   render() {
     return(
       <>
-      <div id="navba" fixed="top">
-      <div className='container'>
-        <Navbar dark expand="md">
+
+        <Navbar id="navba" dark expand="md" sticky='top'>
 
         <NavbarBrand href="/" className="mr-auto"
         ><img src='images/golo.png' height="50" width="50" alt='logo' /></NavbarBrand>
@@ -39,13 +38,13 @@ class Header extends Component {
             <NavLink className="nav-link"  href='/'><span className="fa fa-home fa-lg"></span> Home</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link"  href='/projects'><span className="fa fa-diagram-project fa-lg"></span> Projects</NavLink>
+            <NavLink className="nav-link"  href='/projects'><span className="fa-solid fa-list-check fa-lg"></span> Projects</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link"  href='/about'><span className="fa fa-info fa-lg"></span> About</NavLink>
+            <NavLink className="nav-link"  href='/about'><span className="fa-solid fa-circle-info fa-lg"></span> About</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink className="nav-link"  href='/about'> Blogs</NavLink>
+            <NavLink className="nav-link"  href='/about'><span className="fa-solid fa-blog fa-lg"></span>  Blogs</NavLink>
           </NavItem>
           <NavItem>
             <NavLink className="nav-link"  href='/contact'><span className="fa fa-address-card fa-lg"></span> Contact</NavLink>
@@ -53,10 +52,10 @@ class Header extends Component {
         </Nav>
         <Button className='mr-0' onClick={this.toggleModal}>Login</Button>
         </Collapse>
-        
+
         </Navbar>
-        </div>
-        </div>
+
+
         <section id="about">
            <div className="container">
              <div className="row">
@@ -104,7 +103,7 @@ class Header extends Component {
             </svg>
         </section>
         </section>
-      </>
+  </>
     );
   }
 }
