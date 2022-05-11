@@ -8,6 +8,7 @@ import Blogs from './BlogsComponent';
 import Header from './HeaderComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
+import Try from './Try';
 import { Routes, Route, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -39,6 +40,7 @@ class Main extends Component {
           <Route exact path="/projects" element={<Project projects={this.props.projects}/> }></Route>
           <Route index path="/projects/:projectId" element={<ProjectDetail projects={this.props.projects} comments={this.props.comments}/> } />
           <Route exact path="/blogs" element={<Blogs blogs={this.props.blogs}/> }></Route>
+          <Route path="/try" element={<Try />}/>
           <Route path="/about" element={<About />}/>
           <Route path="*" element={
             <main style={{ padding : "1 rem", backgroundColor: "antiquewhite" }}>
