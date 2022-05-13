@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { Component, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
-import { Card, CardImg, CardBody, CardText, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardBody, CardText, CardTitle, Breadcrumb, BreadcrumbItem, Modal, ModalHeader, ModalBody, Row, Label, Button } from 'reactstrap';
+import {LocalForm, Control, Errors} from 'react-redux-form';
+
 import  { useParams } from 'react-router-dom';
 
 
@@ -47,6 +49,7 @@ function RenderComments({comments}){
         <div className="col-md-6">
             <h1 className="text-info">Comments</h1>
             {project}
+            <CommentForm />
             </div>
     );
         
@@ -99,5 +102,92 @@ const ProjectDetail = (props) => {
         // <renderProject />
     );
 }
+const required = (val) => val && val.length;
+const maxLength = (len) => (val) => !(val) || (val.length <= len);
+const minLength = (len) => (val) => val && (val.length >= len);
 
+class CommentForm extends Component{
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isModalOpen: false
+    };
+    this.toggleModal = this.toggleModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  toggleModal() {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
+    });
+  }
+
+  handleSubmit(values) {
+      this.toggleModal();
+      console.log('Current State is: ' + JSON.stringify(values));
+      alert('Current State is: ' + JSON.stringify(values));
+      // event.preventDefault();
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+      <div className="container">
+      <Button outline onClick={this.toggleModal}><span className="fa fa-pencil fa-lg"></span> Submit Comment</Button>
+        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+          <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
+          <ModalBody>
+            <LocalForm className="container" onSubmit={(values) => this.handleSubmit(values)}>
+              <Row className="form-group">
+                <Label htmlFor="rating">Rating</Label>
+                <Control.select className= "form-control" type="number" id="rating" name="rating" min="0" max="5"
+                model=".rating" defaultValue={5}>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  </Control.select>
+              </Row>
+              <Row className="form-group">
+              <Label htmlFor="firstname">First Name</Label>
+
+              <Control.text model=".author" id="author" name="author"
+                      placeholder="Your Name"
+                      className="form-control"
+                      validators={{
+                              required, minLength: minLength(3), maxLength: maxLength(15)
+                          }} />
+                      <Errors
+                          className="text-danger"
+                          model=".name"
+                          show="touched"
+                          messages={{
+                              required: 'Required ',
+                              minLength: 'Must be greater than 2 characters',
+                              maxLength: 'Must be 15 characters or less'
+                          }}
+                       />
+              </Row>
+              <Row className="form-group">
+                  <Label htmlFor="message">Comment</Label>
+
+                      <Control.textarea model=".comment" id="comment" name="comment"
+                          rows="6"
+                          className="form-control" />
+
+              </Row>
+              <Row className="form-group">
+              <Button type="submit" value="submit" color="primary">Submit</Button>
+              </Row>
+            </LocalForm>
+          </ModalBody>
+
+        </Modal>
+        </div>
+      </React.Fragment>
+    );
+  }
+}
 export default ProjectDetail;

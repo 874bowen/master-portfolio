@@ -42,6 +42,7 @@ class Main extends Component {
           <Route exact path="/blogs" element={<Blogs blogs={this.props.blogs}/> }></Route>
           <Route path="/try" element={<Try />}/>
           <Route path="/about" element={<About />}/>
+          <Route path="/testi" element={<Testimonials />}/>
           <Route path="*" element={
             <main style={{ padding : "1 rem", backgroundColor: "antiquewhite" }}>
               <h2 className='text-center text-danger'>There is nothing here!</h2>
@@ -53,7 +54,7 @@ class Main extends Component {
         {/* <Project projects= {this.props.projects} onClick={(projectId) => this.onProjectSelect(projectId)}/>
         <ProjectDetail project={this.props.projects.filter((project) => project.id === this.props.selectedProject)[0]}/> */}
         
-        <Testimonials />
+
         <Footer />
       </main>
     );
