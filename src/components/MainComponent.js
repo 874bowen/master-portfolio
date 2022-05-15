@@ -8,8 +8,11 @@ import Blogs from './BlogsComponent';
 import Header from './HeaderComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
-import { Routes, Route, withRouter} from 'react-router-dom';
+import Try from './Try';
+import { Routes, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addComment } from '../redux/ActionCreators';
+
 
 const mapStateToProps = state => {
   return{
@@ -21,15 +24,12 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+    addComment: (projectId, rating, author, comment) => dispatch(addComment(projectId, rating, author, comment)),
+});
+
 class Main extends Component {
-  constructor(props){
-    super(props);
-
-  }
-
-
   render(){
-    console.log(this.props.skills);
 
     return (
       <main>
@@ -37,9 +37,11 @@ class Main extends Component {
         <Routes>
           <Route path="/" element={<Home featuredProject={this.props.projects.filter((project) => project.featured)[0]} featuredBlog={this.props.blogs.filter((blog) => blog.featured)[0]} features={this.props.features} skills={this.props.skills}/>} />
           <Route exact path="/projects" element={<Project projects={this.props.projects}/> }></Route>
-          <Route index path="/projects/:projectId" element={<ProjectDetail projects={this.props.projects} comments={this.props.comments}/> } />
+          <Route index path="/projects/:projectId" element={<ProjectDetail projects={this.props.projects} comments={this.props.comments} addComment={this.props.addComment}/> }  />
           <Route exact path="/blogs" element={<Blogs blogs={this.props.blogs}/> }></Route>
+          {/* <Route path="/try" element={<Try />}/> */}
           <Route path="/about" element={<About />}/>
+          {/* <Route path="/testi" element={<Testimonials />}/> */}
           <Route path="*" element={
             <main style={{ padding : "1 rem", backgroundColor: "antiquewhite" }}>
               <h2 className='text-center text-danger'>There is nothing here!</h2>
@@ -51,7 +53,7 @@ class Main extends Component {
         {/* <Project projects= {this.props.projects} onClick={(projectId) => this.onProjectSelect(projectId)}/>
         <ProjectDetail project={this.props.projects.filter((project) => project.id === this.props.selectedProject)[0]}/> */}
         
-        <Testimonials />
+
         <Footer />
       </main>
     );
@@ -61,4 +63,4 @@ class Main extends Component {
 
 // for this connect to work  you need to connect this to withRouter
 // now the state will be available as Props
-export default connect(mapStateToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

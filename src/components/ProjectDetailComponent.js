@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { Component, useEffect, useRef } from "react";
 import { Link } from 'react-router-dom';
-import { Card, CardImg, CardBody, CardText, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardBody, CardText, CardTitle, Breadcrumb, BreadcrumbItem, Modal, ModalHeader, ModalBody, Row, Label, Button } from 'reactstrap';
+import {LocalForm, Control, Errors} from 'react-redux-form';
+
 import  { useParams } from 'react-router-dom';
 
 
@@ -25,7 +27,7 @@ function RenderProject({project}){
         );
     }
 }
-function RenderComments({comments}){
+function RenderComments({comments, projectId, addComment}){
 
     const project = comments.map((comment) =>{
         return(
@@ -47,27 +49,31 @@ function RenderComments({comments}){
         <div className="col-md-6">
             <h1 className="text-info">Comments</h1>
             {project}
+            <CommentForm projectId={projectId} addComment={addComment} />
             </div>
     );
         
 }
 const ProjectDetail = (props) => {
     console.log("ProjectDetail Component render() is invoked");
+    console.log("this is "+ props.addComment);
     const testRef = useRef();
     useEffect(() => {
         testRef.current.scrollIntoView();
     });
     let params = useParams();
-    var x = params.projectId;
-    console.log(x);
+    // var x = params.projectId;
+    var x = props.projects.id;
+    console.log('project number '+ x);
     const projectDetail = props.projects;
     console.log(projectDetail)
     if(projectDetail == null){
         return (<div></div>);
     }
-    var project=props.projects.filter((project) => project.id === parseInt(params.projectId,10))[0]
-    var comment=props.comments.filter((comment) => comment.projectId === parseInt(params.projectId,10))
-    console.log(comment)
+    var project=props.projects.filter((project) => project.id === parseInt(params.projectId,10))[0];
+    var comment=props.comments.filter((comment) => comment.projectId === parseInt(params.projectId,10));
+    console.log(comment);
+    console.log(project.id);
     return(
         <section id="projectdetail">
             <div className="container">
@@ -84,7 +90,7 @@ const ProjectDetail = (props) => {
             <div className="container">
                 <div className="row">
                 <RenderProject project={project}/>
-                <RenderComments comments={comment}/>
+                <RenderComments comments={comment} addComment={props.addComment} projectId={project.id} />
                 </div>
             </div>
             <section className="proj-bcg">
@@ -99,5 +105,96 @@ const ProjectDetail = (props) => {
         // <renderProject />
     );
 }
+const required = (val) => val && val.length;
+const maxLength = (len) => (val) => !(val) || (val.length <= len);
+const minLength = (len) => (val) => val && (val.length >= len);
 
+class CommentForm extends Component{
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isModalOpen: false
+    };
+    this.toggleModal = this.toggleModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  toggleModal() {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
+    });
+  }
+
+  handleSubmit(values) {
+    this.toggleModal();
+    this.props.addComment(this.props.projectId, values.rating, values.author, values.comment);
+    console.log(this.props.projectId, values.rating, values.author, values.comment);
+    console.log('project ' + this.props.projectId)
+    console.log('Current State is: ' + JSON.stringify(values));
+    // alert('Current State is: ' + JSON.stringify(values));
+    //   event.preventDefault();
+  }
+
+  render() {
+
+    return (
+      <React.Fragment>
+      <div className="container">
+      <Button outline color="info" onClick={this.toggleModal}><span className="fa fa-pencil fa-lg"></span> Submit Comment</Button>
+        <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+          <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
+          <ModalBody>
+            <LocalForm className="container" onSubmit={this.handleSubmit}>
+              <Row className="form-group">
+                <Label htmlFor="rating">Rating</Label>
+                <Control.select className= "form-control" type="number" id="rating" name="rating" min="0" max="5"
+                model=".rating" defaultValue={5}>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  </Control.select>
+              </Row>
+              <Row className="form-group">
+              <Label htmlFor="firstname">First Name</Label>
+
+              <Control.text model=".author" id="author" name="author"
+                      placeholder="Your Name"
+                      className="form-control"
+                      validators={{
+                              required, minLength: minLength(3), maxLength: maxLength(15)
+                          }} />
+                      <Errors
+                          className="text-danger"
+                          model=".author"
+                          show="touched"
+                          messages={{
+                              required: 'Required ',
+                              minLength: 'Must be greater than 2 characters',
+                              maxLength: 'Must be 15 characters or less'
+                          }}
+                       />
+              </Row>
+              <Row className="form-group">
+                  <Label htmlFor="message">Comment</Label>
+
+                      <Control.textarea model=".comment" id="comment" name="comment"
+                          rows="6"
+                          className="form-control" />
+
+              </Row>
+              <Row className="form-group">
+              <Button type="submit" value="submit" color="primary">Submit</Button>
+              </Row>
+            </LocalForm>
+          </ModalBody>
+
+        </Modal>
+        </div>
+      </React.Fragment>
+    );
+  }
+}
 export default ProjectDetail;
