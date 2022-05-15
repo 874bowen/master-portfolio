@@ -27,7 +27,7 @@ function RenderProject({project}){
         );
     }
 }
-function RenderComments({comments}){
+function RenderComments({comments, projectId, addComment}){
 
     const project = comments.map((comment) =>{
         return(
@@ -49,28 +49,31 @@ function RenderComments({comments}){
         <div className="col-md-6">
             <h1 className="text-info">Comments</h1>
             {project}
-            <CommentForm />
+            <CommentForm projectId={projectId} addComment={addComment} />
             </div>
     );
         
 }
 const ProjectDetail = (props) => {
     console.log("ProjectDetail Component render() is invoked");
+    console.log("this is "+ props.addComment);
     const testRef = useRef();
     useEffect(() => {
         testRef.current.scrollIntoView();
     });
     let params = useParams();
-    var x = params.projectId;
-    console.log(x);
+    // var x = params.projectId;
+    var x = props.projects.id;
+    console.log('project number '+ x);
     const projectDetail = props.projects;
     console.log(projectDetail)
     if(projectDetail == null){
         return (<div></div>);
     }
-    var project=props.projects.filter((project) => project.id === parseInt(params.projectId,10))[0]
-    var comment=props.comments.filter((comment) => comment.projectId === parseInt(params.projectId,10))
-    console.log(comment)
+    var project=props.projects.filter((project) => project.id === parseInt(params.projectId,10))[0];
+    var comment=props.comments.filter((comment) => comment.projectId === parseInt(params.projectId,10));
+    console.log(comment);
+    console.log(project.id);
     return(
         <section id="projectdetail">
             <div className="container">
@@ -87,7 +90,7 @@ const ProjectDetail = (props) => {
             <div className="container">
                 <div className="row">
                 <RenderProject project={project}/>
-                <RenderComments comments={comment}/>
+                <RenderComments comments={comment} addComment={props.addComment} projectId={project.id} />
                 </div>
             </div>
             <section className="proj-bcg">
@@ -124,21 +127,25 @@ class CommentForm extends Component{
   }
 
   handleSubmit(values) {
-      this.toggleModal();
-      console.log('Current State is: ' + JSON.stringify(values));
-      alert('Current State is: ' + JSON.stringify(values));
-      // event.preventDefault();
+    this.toggleModal();
+    this.props.addComment(this.props.projectId, values.rating, values.author, values.comment);
+    console.log(this.props.projectId, values.rating, values.author, values.comment);
+    console.log('project ' + this.props.projectId)
+    console.log('Current State is: ' + JSON.stringify(values));
+    // alert('Current State is: ' + JSON.stringify(values));
+    //   event.preventDefault();
   }
 
   render() {
+
     return (
       <React.Fragment>
       <div className="container">
-      <Button outline onClick={this.toggleModal}><span className="fa fa-pencil fa-lg"></span> Submit Comment</Button>
+      <Button outline color="info" onClick={this.toggleModal}><span className="fa fa-pencil fa-lg"></span> Submit Comment</Button>
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
           <ModalBody>
-            <LocalForm className="container" onSubmit={(values) => this.handleSubmit(values)}>
+            <LocalForm className="container" onSubmit={this.handleSubmit}>
               <Row className="form-group">
                 <Label htmlFor="rating">Rating</Label>
                 <Control.select className= "form-control" type="number" id="rating" name="rating" min="0" max="5"
@@ -161,7 +168,7 @@ class CommentForm extends Component{
                           }} />
                       <Errors
                           className="text-danger"
-                          model=".name"
+                          model=".author"
                           show="touched"
                           messages={{
                               required: 'Required ',
