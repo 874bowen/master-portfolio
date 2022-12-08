@@ -15,7 +15,7 @@ function RenderProject({project}){
                     <CardImg width="100%" src={`/${project.image}`} alt={project.subtitle}/>
                     <CardBody>
                         <CardTitle><strong>{project.title}</strong></CardTitle>
-                        <CardText>{project.description}</CardText>
+                        <CardText>{project.description} <br/> Here is a <a href={project.link} target="_blank">website link</a> and a <a href={project.github} target="_blank">GitHub Repository</a> to the project</CardText>
                     </CardBody>
                 </Card>
             </div>

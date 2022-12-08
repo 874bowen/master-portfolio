@@ -21,6 +21,6 @@ export const FEATURES = [
         description: 'Create, maintain, test, and debug the entire back end of your website.Everything from the core application logic, databases, and other back end processes.',
         image: './images/bowen.jpeg',
         motivation: "#communication",
-        framework: 'Django'     
+        framework: 'Node.js'     
     }
 ]

@@ -10,7 +10,7 @@ function RenderProjectItem({proj, onClick}){  // this is one way of having funct
             <Link to={`/projects/${proj.id}`}>
                 <CardImg width="100%" src={proj.image} alt={proj.subtitle}/>
                 <CardImgOverlay>
-                    <CardTitle >{proj.title} --<span className="text-warning"> {proj.subtitle} </span></CardTitle>
+                    <CardTitle style={{"background-color": "#333942", "border-radius": "3px"}} className="p-2">{proj.title} -- <span className="text-white"> {proj.subtitle} </span></CardTitle>
                     {/* <p>{proj.description}</p> */}
                 </CardImgOverlay>
             </Link>
