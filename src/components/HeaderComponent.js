@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Modal, ModalBody, ModalHeader, Button } from 'reactstrap';
+import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Button } from 'reactstrap';
 import 'font-awesome/css/font-awesome.css';
 
 class Header extends Component {
@@ -57,16 +57,14 @@ class Header extends Component {
 
         <section id="about">
            <div className="container">
-             <div className="row">
+             <div className="row d-flex align-items-center p-5">
                <div className="align-self-center col-12 col-md-6">
                <h1 className="text-white">
                  Hi, I'm <span className="text-success">Ivan Bowen</span>.
                </h1>
                <h2>I love <span className="brick">building</span> amazing
                  web apps.</h2>
-              <p className="">
-               Enthusiastic Web developer eager to contribute to team success through hard work, attention to detail and excellent organizational skills. Clear understanding of web development and designing and training in Responsive Web Design. Motivated to learn, grow and excel in Technology.
-               </p>
+              
                <div className="d-flex mb-5 justify-content-between">
                  <a
                   href="/contact"
@@ -79,17 +77,13 @@ class Header extends Component {
                   <Button outline color="warning"><i className="fa fa-eye"></i> See my work</Button>
                 </a>
               </div>
-              
           </div>
           <div className="col-12 col-md-6">
-              <img
-                className="mt-5 rounded mx-auto d-block"
-                alt="hero"
-                src={`/${'./images/bowen.jpeg'}`} width="70%" height="70%"
-              />
-            </div>
-            
-            </div>
+          <p className="">
+               Enthusiastic Web developer eager to contribute to team success through hard work, attention to detail and excellent organizational skills. Clear understanding of web development and designing and training in Responsive Web Design. Motivated to learn, grow and excel in Technology.
+          </p>
+          </div>
+          </div>
 
           </div>
           <section className="mt-40 col-12 custom-shape-divider-bottom-1650314778">

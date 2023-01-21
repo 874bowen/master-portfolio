@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import Home from "./HomeComponent";
 import Footer from "./FooterComponent";
 import Project from './ProjectComponent';
-import Testimonials from "./Testimonials";
 import ProjectDetail from './ProjectDetailComponent';
 import Blogs from './BlogsComponent';
 import Header from './HeaderComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
-import Try from './Try';
 import { Routes, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addComment } from '../redux/ActionCreators';
@@ -39,9 +37,7 @@ class Main extends Component {
           <Route exact path="/projects" element={<Project projects={this.props.projects}/> }></Route>
           <Route index path="/projects/:projectId" element={<ProjectDetail projects={this.props.projects} comments={this.props.comments} addComment={this.props.addComment}/> }  />
           <Route exact path="/blogs" element={<Blogs blogs={this.props.blogs}/> }></Route>
-          {/* <Route path="/try" element={<Try />}/> */}
           <Route path="/about" element={<About />}/>
-          {/* <Route path="/testi" element={<Testimonials />}/> */}
           <Route path="*" element={
             <main style={{ padding : "1 rem", backgroundColor: "antiquewhite" }}>
               <h2 className='text-center text-danger'>There is nothing here!</h2>

@@ -14,7 +14,7 @@ function RenderFeatures({features}){
           <p className="pt-3">{feature.description}</p>
           <ul className="d-flex list-unstyled mt-auto">
             <li className="me-auto">
-              <img src={`/${feature.image}`} alt="ivan" width="32" height="32" className="rounded-circle border border-white"/>
+              
             </li>
             <li className="d-flex align-items-center me-3">
               <svg className="bi me-2" width="1em" height="1em"><use href="#geo-fill"/></svg>
@@ -81,7 +81,7 @@ function Home(props){
                     </div>
                     <div className="col-md-6">
                         <Card>
-                            <CardImg width="100%" src={`/${'./images/docstings.jpg'}`} alt={props.featuredBlog.subtitle}/>
+                            <CardImg width="100%" src="https://res.cloudinary.com/practicaldev/image/fetch/s--0oYv82i5--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kgbyyrqu0dgt5f2xf1ke.png" style={{height: "300px"}} alt={props.featuredBlog.subtitle}/>
                             <CardImgOverlay><Link
                               to="/blogs"
                               className="rounded text-lg float-right">
@@ -111,22 +111,16 @@ function Home(props){
                 <h1 className="mb-5 fw-boldn text-center">Testimonials</h1>
                 <div className="row">
                   <div className="col-lg-4 text-center">
-                  <img src={`/${'./images/woman.jpg'}`} alt="Becky" width="75" height="100" className="rounded-circle border border-white"/>
-
                     <h3>Becky</h3>
                     <p><i>"It’s obvious he takes tremendous pride in his work, and I wouldn’t hesitate to recommend or work with him again."</i></p>
 
                   </div>
                   <div className="col-lg-4 text-center">
-                  <img src={`/${'./images/man.jpg'}`} alt="francis" width="75" height="100" className="rounded-circle border border-white"/>
-
                     <h3>Francis</h3>
                     <p><i>"Ivan is an authority on web development and is clearly in the upper percentile in terms of developer qualifications."</i></p>
 
                   </div>
                   <div className="col-lg-4 text-center">
-                  <img src={`/${'./images/woman.png'}`} alt="miriam" width="75" height="100" className="rounded-circle border border-white"/>
-
                     <h3>Miriam</h3>
                     <p><i>"The work we received from him was top-notch, thoroughly documented, and full of touches that show his commitment to quality."</i></p>
                   </div>

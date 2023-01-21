@@ -19,7 +19,7 @@ function RenderBlogs({blog}){
             <p className="lead">{blog.description}</p>
         </div>
         <div className="mt-4 d-none d-md-block col-md-5">
-            <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style={{height: "80%"}} src={`/${blog.image}`} alt={blog.title}/>
+            <img className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style={{height: "200px", width:"100%"}} src={blog.image} alt={blog.title}/>
 
       </div>
         </div>
