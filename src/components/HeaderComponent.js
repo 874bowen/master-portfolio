@@ -57,7 +57,7 @@ class Header extends Component {
 
         <section id="about">
            <div className="container">
-             <div className="row d-flex align-items-center p-5">
+             <div className="row d-flex align-items-center p-md-5">
                <div className="align-self-center col-12 col-md-6">
                <h1 className="text-white">
                  Hi, I'm <span className="text-success">Ivan Bowen</span>.

@@ -6,7 +6,7 @@ export const BLOGS = [
         image: 'https://res.cloudinary.com/practicaldev/image/fetch/s--0oYv82i5--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kgbyyrqu0dgt5f2xf1ke.png',
         link: "https://medium.com/@ivan_bowen/docstrings-in-python-for-beginners-9bdd2657f8c4",
         date: "2023-01-01T19:50:28.346094Z",
-        description:'When building an e-commerce application backend development is important. Developers need to come up with complex functions and this might be time-consuming and costly. Serverless ...',
+        description:'When building an e-commerce application backend development is important. Developers need to come up with complex functions and this might be time-consuming and costly. Serverless computing allows developers to build applications more quickly and less costly since they don\'t have to worry about  managing their ...',
         featured: true,     
     },
     {

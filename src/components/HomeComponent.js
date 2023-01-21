@@ -67,7 +67,7 @@ function Home(props){
                 <div className="row">
                     <div className="col-md-6">
                         <Card>
-                            <CardImg width="100%" src={props.featuredProject.image} alt={props.featuredProject.subtitle}/>
+                            <CardImg width="100%" src={props.featuredProject.image} style={{height: "auto"}} alt={props.featuredProject.subtitle}/>
                             <CardImgOverlay><Link
                               to="/projects"
                               className="rounded text-lg float-right">
@@ -81,7 +81,7 @@ function Home(props){
                     </div>
                     <div className="col-md-6">
                         <Card>
-                            <CardImg width="100%" src="https://res.cloudinary.com/practicaldev/image/fetch/s--0oYv82i5--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kgbyyrqu0dgt5f2xf1ke.png" style={{height: "300px"}} alt={props.featuredBlog.subtitle}/>
+                            <CardImg width="100%" src="https://res.cloudinary.com/practicaldev/image/fetch/s--0oYv82i5--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kgbyyrqu0dgt5f2xf1ke.png" style={{height: "auto"}} alt={props.featuredBlog.subtitle}/>
                             <CardImgOverlay><Link
                               to="/blogs"
                               className="rounded text-lg float-right">
